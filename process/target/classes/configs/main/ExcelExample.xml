@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://web-harvest.sourceforge.net/schema/1.0/config" scriptlang="groovy">
+	<robotics-flow>
+		<robot driver="universal">
+			<script><![CDATA[ 
+				import com.workfusion.bangaloreLab.deployProj.app.AppExample
+        		import com.workfusion.bangaloreLab.deployProj.supplier.ExcelExample
+
+		        def app = AppExample.init(binding).get();
+		        def transactions = app.loadTransactions(ExcelExample.class);
+			]]></script>
+		</robot>
+	</robotics-flow>
+    <export include-original-data="true"></export>
+
+</config>
